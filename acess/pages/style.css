@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 100vh;
+}
+
+.back{
+  width: 100vh;
+  display: flex;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.item-description {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+.item-price {
+    font-size: 20px;
+    color: #e63946;
+    margin: 10px 0;
+}
+
+.order-button {
+    background-color: #f1faee;
+    background-color: #f84c08;
+    border: none;
+    margin: 4px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+  background-color: #d6450b;
+}
+
+#buttons{
+    display: flex;
+    margin-right: 100px;
+}
+
+#quantidade{
+    margin: 7px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: end; */
+    gap: 20px;
+}
+
+/* Estilos gerais dos botões */
+.btn {
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+#ingredientes{
+    margin-bottom: 5px;
+}
+
+/* Estilo do botão de "mais" */
+.btn-more {
+    background-color: #2f7732;
+    color: white;
+}
+
+.btn-more:hover {
+    background-color: #4cb851;
+}
+
+/* Estilo do botão de "menos" */
+.btn-less {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-less:hover {
+    background-color: #b82724;
+}
+
+.cssbuttons-io-button {
+  background:  #ff451c;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em  #c72e0c;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em  #ff3d12;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  transform: scaleX(-1);
+
+  width: 1.1em;
+  transition: transform 0.3s;
+  color:  #ff5733;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+  transform: scaleX(-1);
+
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+
+}
+
+/* From Uiverse.io by Rudra1725 */ 
+.btn1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    background-color: white;
+    border: solid  #ff5733 2px;
+    border-radius: 9px;
+    font-size: 19px;
+    padding: 12px;
+    box-shadow: inset 0 0 4px black;
+    font-weight: 500;
+    transition: 400ms;
+    cursor: pointer;
+  }
+  /* .btn1:hover {
+    transition: 400ms;
+    box-shadow: inset 0 0 6px black, 0 0 10px wheat;
+  } */
+  .btn1:active {
+    transition: 50ms;
+    box-shadow: inset 0 0 0px black, 0 0 10px wheat;
+  }
+  
+  /* From Uiverse.io by SelfMadeSystem */ 
+/* Hide the default checkbox */
+.container input {
+    display: none;
+    
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #2196F300;
+    border-radius: 0.25em;
+    transition: all 0.25s;
+
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    transform: rotate(0deg);
+    border: 0.1em solid black;
+    left: 0;
+    top: 0;
+    width: 1.05em;
+    height: 1.05em;
+    border-radius: 0.25em;
+    transition: all 0.25s, border-width 0.1s;
+
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border-color: #fff0 white white #fff0;
+    border-width: 0 0.15em 0.15em 0;
+    border-radius: 0em;
+    transform: rotate(45deg);
+
+  }
+  
+
+
+
+.separator{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    margin: 3px;
+}
+h5{
+    margin-right: 20px;
+}
+/* From Uiverse.io by Na3ar-17 */ 
+.radio-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .radio-input * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .radio-input label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 20px;
+    width: 220px;
+    cursor: pointer;
+    height: 50px;
+    position: relative;
+  }
+  
+  .radio-input label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 45px;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  .radio-input label:hover::before {
+    transition: all 0.2s ease;
+    background-color: #c74427c9;
+  }
+  
+  .radio-input .label:has(input:checked)::before {
+    background-color: #f5461f;
+    border-color: #ff451c;
+    height: 50px;
+  }
+  .radio-input .label .text {
+    color: #000000;
+  }
+  
+  .radio-input .label input[type="radio"] {
+    background-color: #ff451c;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .label:checked{
+    background-color: rgb(255, 0, 0);
+}
+  input[type="radio"]{
+    background-color: #ff0000;
+  }
+  .radio-input .label input[type="radio"]:checked {
+    background-color: #dd3315;
+    -webkit-animation: puls 0.7s forwards;
+    animation: pulse 0.7s forwards;
+  }
+  
+  .radio-input .label input[type="radio"]:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #ffffff;
+    transform: scale(0);
+  }
+  
+  .radio-input .label input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+
+
+
+  .barlow-condensed-thin {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-extralight {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-light {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-regular {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-medium {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-semibold {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .Text-Price {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-extrabold {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-black {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-thin-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-extralight-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-light-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-regular-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-medium-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-semibold-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-bold-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-extrabold-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-black-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+
+
+
+
+
+  /* From Uiverse.io by satyamchaudharydev */ 
+.form {
+    --width-of-input: 300px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: #ff451c;
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+    margin: 20px;
+   }
+
+   .input {
+    color: #000000;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+   }
+
+   .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+   }
+
+   input:hover {
+    background: var(--input-hovered-color);
+   }
+   
+   input:focus {
+    outline: none;
+   }
+
+   input:focus ~ .input-border {
+    width: 100%;
+   }

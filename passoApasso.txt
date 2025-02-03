@@ -1,0 +1,22 @@
+## passo 1:
+criar uma database chamada "pizzariaSaborArte";
+
+## passo 2:
+na pasta banco, abrir 'conectionSQL.js', configurar seu banco de dados.
+
+## passo 3:
+Abra o terminal: CRTL+SHIFT+' e cole o este comando:
+node --watch banco/app.js
+
+caso não for possivel execute sem o "--watch"
+
+## passo 4:
+ser feliz:
+
+## 1-
+caso queira começar se registrando: execute o:
+"/register/register.html"
+
+## 2-
+caso queira acessar direto a pizzaria execute o:
+"/acess/pages/home/index.html"

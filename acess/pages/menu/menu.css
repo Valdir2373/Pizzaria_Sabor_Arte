@@ -1,0 +1,50 @@
+.buttonPizza {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #ff5733;
+    border: 2px solid  #cf5f46;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .buttonPizza::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #e24f2d;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .buttonPizza:hover::before {
+    transition: 1s;
+    color: #212121;
+    scale: 5;
+  }
+  
+  .buttonPizza:hover {
+    color: #212121;
+    transition: 0.7s;
+    scale: 1.1;
+    box-shadow: 0 0px 20px  #ff2f00;
+  }
+  
+  .buttonPizza:active {
+    scale: 1;
+  }
+  
+  .barlow-condensed-thin-italic {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 100;
+    font-style: italic;
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleRegister.css">
+    <title>Registration Form</title>
+    
+
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="content">
+    <div class="container">
+        <form id="formRegis" onsubmit="modelForm.register(event)">
+            <div class="form">
+            <label for="name"><strong>Username</strong></label>
+            <input type="text" class="input" placeholder="Enter Username" id="name" name="name" >
+            <span class="input-border"></span>
+            
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" id="email" placeholder="Enter Email" name="email" >
+
+            <label for="password"><strong>Password</strong></label>
+            <input type="password" min="5" id="password1" placeholder="Enter Password" name="password" >
+            
+            <label for="confirm-password"><strong>Confirm Password</strong></label>
+            <input type="password" min="5" id="password2" placeholder="Confirm Password" name="confirm-password" >
+            
+            <label for="dob"><strong>D.O.B</strong></label>
+            <input type="date" id="date" name="dob" >
+            
+            <label for="gender"><strong>Gender</strong></label>
+            <select id="gender" name="gender" >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="check">
+                <div><p id="a-password" class="p"> Mostrar Senha</div> <div class="checkBox"> <label class="container-check">
+                    <input type="checkbox" id="checkbox-id" name="Mostrar Senha">
+                    <svg viewBox="0 0 64 64" height="2em" width="2em">
+                      <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                    </svg>
+                  </label></div></p>
+            </div>
+            <div class="clear"></div>
+            <hr>
+
+            <div class="buttonPizza-container">
+                <button type="submit" class="buttonPizza">Register</button>
+            </div>
+            <div class="signin">
+                <p>Already have an account? <a href="/login/login.html">Sign in</a>.</p>
+                
+            </div>
+        </form>
+    </div>
+    <script src="../model/ModelForm.js"></script>
+    <script src="../model/index2.js"></script>
+    <script src="register.js"></script>
+    <script src="../services/users/Usuarios.js"></script>
+    <script src="../services/api.js"></script>
+    <script>
+        const modelForm = new ModelForm()
+  
+
+    </script>
+</body>
+</html>
