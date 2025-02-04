@@ -19,7 +19,7 @@ async function ConstruirComanda(){
         CriarParagrafo(`Borda: ${comanda.edge}, ${comanda.quantity} ${comanda.pizzaName} Opc: ${comanda.opcityon}, R$: ${comanda.valuePizza.replace('.',',')}`)
     }
         divComandas.appendChild(document.createElement('br'))
-        CriarParagrafo("Total a pagar é:  R$:"+listaDeComandas.reduce((acc,comanda)=>acc+Number(comanda.valuePizza),0).toString().replace('.',','))
+        CriarParagrafo("Total a pagar é:  R$:"+listaDeComandas.reduce((acc,comanda)=>acc+Number(comanda.valuePizza),0).toFixed(2).toString().replace('.',','))
 
         CriarButton('Finalizar Compra',async function(){await apagarItens(idUser)})
         divComandas.appendChild(document.createElement('br'))

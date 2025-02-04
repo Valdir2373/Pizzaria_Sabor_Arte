@@ -107,6 +107,8 @@ async function PegarPrecosDaPizza(){
 async function precoPizza(id){
     console.log(id);
     const preco = await PegarPrecosDaPizza().then(r=> r.json())
+    console.log(preco);
+    
     return preco[id].pricePizza
 }
 

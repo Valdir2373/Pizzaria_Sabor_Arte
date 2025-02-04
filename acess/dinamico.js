@@ -174,7 +174,7 @@ const pegarNomeDoUsuario = async(nomeQueProcura)=>{
     const TodosOsUsuarios = await pegarUsuarios();
     for (const user of TodosOsUsuarios) {
         if(user.username === nomeQueProcura){
-            return user.username
+            return true
         }
     }
     return false

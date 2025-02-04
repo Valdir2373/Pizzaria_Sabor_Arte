@@ -107,7 +107,8 @@ async function adicionarSacola(){
 
     const nome = localStorage.getItem('user')
     const nomeDoUsuario = await pegarNomeDoUsuario(nome)
-    if (nomeDoUsuario){
+    
+    if (nomeDoUsuario != true){
         localStorage.removeItem('user');
         return alert('Usuario Invalido');
     }

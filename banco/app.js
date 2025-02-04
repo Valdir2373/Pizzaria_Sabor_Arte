@@ -3,6 +3,7 @@ import cors from 'cors'
 import corzinhaNoConsole from 'node:util';
 import db from './conectionSQL.js'
 import AddTables from './addTables.js'
+import { log } from 'node:console';
 
 const app = express();
 app.use(cors());
@@ -106,10 +107,12 @@ app.post('/Create/Comandas',async(req,res)=>{
     const valuePizza = req.body.valuePizza
     const idOfUser = req.body.idOfUser
 
-    const [resultsTablePeople, fieldsTaablePeople] = await db.query(
+    const [resultsTableComanda, fieldsTableComanda] = await db.query(
         `INSERT INTO comandas (idComanda, edge, quantity, pizzaName, opcityon, valuePizza, idOfUser) VALUES
         (default, '${edge}', '${quantity}', '${pizzaName}','${opc}','${valuePizza}', '${idOfUser}')`
       );
+    
+
     res.status(201)
     res.end()
 })
@@ -170,6 +173,18 @@ app.delete('/Comanda/Delete/:id',async(req,res)=>{
         `delete from comandas where(idOfUser='${id}')`
         )
         console.log(results);
+    
+        const [resultsTablePeople, fieldsTaablePeople] = await db.query(
+            `select buys from peoplecadastre where id = '${id}'`
+          );
+          db.query(select)
+        if(resultsTablePeople[0].buys === null){
+            
+            return db.query(`UPDATE peoplecadastre SET buys = 1 WHERE (id = '${id}')`);
+            }
+    
+            return db.query(`UPDATE peoplecadastre SET buys = ${Number(resultsTablePeople[0].buys)+1} WHERE (id = '${id}')`);
+          
 })
 
 //porta:
